@@ -2,7 +2,7 @@
 
 A small, standalone [LangChain](https://docs.langchain.com/oss/python/langchain/tools) tool for reading rendered public webpages through [AdsCrawl's `/html` API](https://docs.adscrawl.net/api-reference/html).
 
-Maintained by AdsCrawl. This is not a LangChain-maintained package, an endorsement, or a claim of inclusion in LangChain's official integration directory. The initial version is distributed as source on GitHub; it has **not been published to PyPI**.
+Maintained by AdsCrawl. This is not a LangChain-maintained package, an endorsement, or a claim of inclusion in LangChain's official integration directory.
 
 ## What the tool does
 
@@ -18,9 +18,15 @@ Markdown and JSON are **article extraction modes**, not a promise to convert any
 
 This package does not expose screenshots, forms, cookies, proxy credentials, CDP, MCP sessions or persistent browser profiles. Those are different AdsCrawl capabilities, not features of this tool.
 
-## Install from source
+## Install
 
-Python 3.11 or later and Git are required (matching `langchain-core>=1.8.0`):
+Python 3.11 or later is required (matching `langchain-core>=1.8.0`). Use a published [PyPI release](https://pypi.org/project/langchain-adscrawl/) when one is listed:
+
+```bash
+python -m pip install langchain-adscrawl
+```
+
+Alternatively, install from source (requires Git):
 
 ```bash
 python -m venv .venv
@@ -28,7 +34,7 @@ source .venv/bin/activate
 python -m pip install "git+https://github.com/AdsCrawl/langchain-adscrawl.git@main"
 ```
 
-For reproducible deployments, replace `main` with a reviewed commit SHA. Do not use `pip install langchain-adscrawl` until a registry release actually exists.
+For reproducible deployments, pin a registry version or replace `main` with a reviewed commit SHA. If no registry release is listed yet, use the source installation above.
 
 ## Read a page without an LLM
 
