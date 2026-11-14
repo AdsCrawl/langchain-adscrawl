@@ -20,7 +20,7 @@ This package does not expose screenshots, forms, cookies, proxy credentials, CDP
 
 ## Install from source
 
-Python 3.10 or later and Git are required:
+Python 3.11 or later and Git are required (matching `langchain-core>=1.8.0`):
 
 ```bash
 python -m venv .venv

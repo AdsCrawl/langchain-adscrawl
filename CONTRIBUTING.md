@@ -12,7 +12,7 @@ python -m build
 python -m pip check
 ```
 
-Use Python 3.10 or later. Before changing a supported dependency range, test the proposed lower bound as well as the current supported version. Pin `langchain-tests` because changes to its standard suite can change the requirements for an integration.
+Use Python 3.11 or later, as required by `langchain-core>=1.8.0`. Before changing a supported dependency range, test the proposed lower bound as well as the current supported version. Pin `langchain-tests` because changes to its standard suite can change the requirements for an integration.
 
 All tests under `tests/unit_tests/` are offline. Keep the applicable `langchain_tests.unit_tests.tools.ToolsUnitTests` adapter as well as focused tests of AdsCrawl's request contract. Test both sync and async paths, supported content modes, key exclusion from schema/serialization, client ownership, URL validation, HTTP status errors, redirects, timeouts and safe error messages. Do not replace a failing assertion with an unconditional skip.
 
